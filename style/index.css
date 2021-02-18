@@ -1,0 +1,13 @@
+/* CSS Document */
+
+.intro-card{
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+
+}
+
+.card{
+  padding: 20px;
+  border-radius: 12px !important;
+  background-color: grey !important;
+}
