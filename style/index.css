@@ -5,9 +5,51 @@
   padding: 20px;
 
 }
-
+.date{
+	font-family: 'Bebas Neue', cursive;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 85px;
+/*	padding: 5px 10px 0px 10px;*/
+	border-radius: 30px;
+	background-color: white !important;
+}
 .card{
-  padding: 20px;
+/*  padding: 20px;*/
   border-radius: 12px !important;
-  background-color: grey !important;
+ 
+}
+
+.image-card{
+	padding: 0;
+	border-radius: 12px 12px 0px 0px !important;
+	object-fit: cover;
+	width: 100%;
+	height: 170px;
+	background-position: center;
+	background-size:cover; 
+	background-image: url("https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940")
+}
+
+.intro-text{
+	 background-color: #383e56 !important;
+	border-radius: 0px 0px 12px 12px !important;
+	padding: 20px 20px 25px 20px;
+}
+
+.col{
+	margin: 0;
+}
+
+.card-head{
+	padding-top: 10px;
+	padding-bottom: 6px;
+	font-size: 22px;
+	color: azure;
+}
+
+.card-sec{
+	color: azure;
+	font-size: 16px;
 }
