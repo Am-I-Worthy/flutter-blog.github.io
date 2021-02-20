@@ -33,7 +33,7 @@ body{
 .code {
   margin: 10px;
   background-color: #34374c;
-  color: #14ffec;
+  color: #6ddccf;
   padding:35px;
   font-size: 18px;
   font-family: 'Quicksand', sans-serif;
@@ -87,7 +87,7 @@ method{
   color: #ec4646;
 }
 
-constructor{
+construct{
   color: #ffee93;
 }
 

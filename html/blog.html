@@ -35,99 +35,172 @@
           </div>
 		</div>
           <pre>
-	  <method>import</method> <string>'package:dart_code_viewer/dart_code_viewer.dart'</string>;
-          <method>import</method> <string>'package:flutter/material.dart'</string>;
-          <method>import</method> <string>'package:google_fonts/google_fonts.dart'</string>;
-	  <method>class</method> <construct>CustomEmbededFrame</construct> extends StatefulWidget
-<!--
-          <method>import</method> <string>'package:dart_code_viewer/dart_code_viewer.dart'</string>;
-          <method>import</method> <string>'package:flutter/material.dart'</string>;
-          <method>import</method> <string>'package:google_fonts/google_fonts.dart'</string>;
+<method>import</method> <string>'dart:math'</string>;
+<method>import</method> <string>'package:flutter/material.dart'</string>;
+<method>import</method> <string>'package:flutter_vector_icons/flutter_vector_icons.dart'</string>;
 
-          <method>class</method> <constructor>CustomEmbededFrame</constructor> <p>extends StatefulWidget</p> {
-            final String <constructor>code</constructor>;
-            final double height;
-            CustomEmbededFrame({<string>this.<constructor>code</constructor>, this.<constructor>height</constructor></string>});
-            @override
-            <constructor>_CustomEmbededFrameState</constructor> <method>createState</method>() => _CustomEmbededFrameState();
-          }
+<keyword>void</keyword> <common>main()</common> {
+  <common>runApp</common><keyword>(</keyword>
+    <method>MaterialApp</method><method>(</method>
+      <common>home</common>: <construct>MyApp</construct><common>()</common>,
+    <method>),</method>
+  <keyword>);</keyword>
+}
 
-          class _CustomEmbededFrameState <method>extends</method> State<CustomEmbededFrame> {
-            @override
-            <common>Widget</common> <method>build</method>(BuildContext <string>context</string>) {
-              return Container(
-                <common>width</common>: <method>MediaQuery</method>.of(context).size.<constructor>width</constructor>,
-                <common>decoration</common>: <method>BoxDecoration</method>(
-                <common>  boxShadow</common>: [
-                    BoxShadow(
-                      <common>color</common>: <string>Colors.<constructor>black26</constructor></string>,
-                      <common>offset</common>: <method>Offset</method>(<string>-2, 2</string>),
-                      <common>blurRadius</common>: 5.0,
-                    )
-                  ],
-                  <common>color</common>: Color(<string>0xFF202124</string>),
-                  borderRadius: <method>BorderRadius</method>.<constructor>circular</constructor>(15.0),
-                ),
-                <common>padding</common>:<method> EdgeInsets</method>.symmetric(horizontal: 35, vertical: 40),
-                <common>margin</common>: <method>EdgeInsets</method>.all(10.0),
-                child: Column(
-                  <common>children</common>: [
-                    Container(
-                      <common>width</common>: <method>MediaQuery</method>.of(context).<method>size</method>.<constructor>width</constructor>,
-                      <common>decoration</common>: <method>BoxDecoration</method>(
-                        <common>boxShadow</common>: [
-                          BoxShadow(
-                            <common>color</common>: <method>Colors</method>.<constructor>black26</constructor>,
-                          <common>  offset</common>: <method>Offset</method>(-2, 2),
-                            <common>blurRadius</common>: 5.0,
-                          )
-                        ],
-                        <common>color</common>: <method>Colors</method>.<constructor>white</constructor>,
-                        <common>borderRadius</common>: <method>BorderRadius</method>.<constructor>circular</constructor>(10.0),
+<common>class</common> <construct>MyApp</construct> <method>extends</method> <common>StatefulWidget</common> <string>{</string>
+  <keyword>@override</keyword>
+  <construct>_MyAppState </construct><method>createState()</method> =&gt; <common>_MyAppState</common>();
+<string>}</string>
+
+<common>class</common> <construct>_MyAppState</construct> <method>extends</method><common> State&lt;MyApp&gt;</common> <string>{</string>
+  <keyword>@override</keyword>
+  <common>Widget</common> <keyword>build</keyword>(<construct>BuildContext</construct> <common>context</common>) <common>{</common>
+    <keyword>return</keyword> <method>Scaffold</method><construct>(</construct>
+      <common>body</common>: <method>Container</method><construct>(</construct>
+        <common>height</common>: <method>MediaQuery</method>.<construct>of</construct><common>(contex).<construct>size</construct>.height</common>,
+        <common>width</common>: <method>MediaQuery</method>.<construct>of</construct><common>(context).<construct>size</construct>.width</common>,
+        <common>color</common>: <method>Colors</method>.<common>black87</common>,
+        <common>child</common>: <method>Row</method>(
+          <common>mainAxisAlignment</common>: <method>MainAxisAlignment</method>.<common>center</common>,
+          <common>children</common>: <keyword>[</keyword>
+            <method>PopupIcon</method>(
+              <common>icon</common>: <method>FontAwesome</method>.<common>instagram</common>,
+              <common>color</common>: <common>Color(<construct>0xffe1306c</construct>)</common>,
+              <common>text</common>: <string>'Instagram'</string>,
+            ),
+            <method>PopupIcon</method>(
+              <common>icon</common>: <method>FontAwesome</method>.<common>github</common>,
+              <common>color</common>: <common>Color(<construct>0xff333333</construct>)</common>,
+              <common>text</common>: <string>'GitHub'</string>,
+            ),
+            <method>PopupIcon</method>(
+              <common>icon</common>: <method>FontAwesome</method>.<common>telegram</common>,
+              <common>color</common>: <common>Color(<construct>0xff0088cc</construct>)</common>,
+              <common>text</common>: <string>'Telegram'</string>,
+            ),
+            <method>PopupIcon</method>(
+              <common>icon</common>: <method>FontAwesome</method>.<common>youtube_play</common>,
+              <common>color</common>: <common>Color(<construct>0xffde463b</construct>)</common>,
+              <common>text</common>: <string>'Youtube'</string>,
+            ),
+            <method>PopupIcon</method>(
+              <common>icon</common>: <method>FontAwesome</method>.<common>linkedin</common>,
+              <common>color</common>: <common>Color(<construct>0xff0e76a8</construct>)</common>,
+              <common>text</common>: <string>'LinkedIn'</string>,
+            ),
+          <keyword>],</keyword>
+        ),
+      <construct>),</construct>
+    <construct>);</construct>
+  <common>}</common>
+<string>}</string>
+
+<common>class</common> <construct>PopupIcon</construct> <method>extends</method> <common>StatefulWidget</common> <keyword>{</keyword>
+  <keyword>final</keyword> <construct>IconData</construct> <common>icon</common>;
+  <keyword>final</keyword> <construct>Color</construct> <common>color</common>;
+  <keyword>final</keyword> <construct>String</construct> <common>text</common>;
+
+  <construct>const</construct> <method>PopupIcon</method>(<keyword>{</keyword>
+    <construct>Key</construct> <common>key</common>,
+    <construct>this</construct>.<common>icon</common>,
+    <construct>this</construct>.<common>color</common>,
+    <construct>this</construct>.<common>text</common>,
+  <keyword>}</keyword>) <common>:</common> <keyword>super</keyword>(<construct>key</construct>: <common>key</common>);
+
+  <keyword>@override</keyword>
+ <construct> _PopupIconState</construct> <method>createState()</method> =&gt; <common>_PopupIconState()</common>;
+<keyword>}</keyword>
+
+<common>class</common> <construct>_PopupIconState</construct> <method>extends</method> <common>State&lt;PopupIcon&gt;</common> <keyword>{</keyword>
+  <construct>bool</construct> <common>onIt = false</common>;
+  <keyword>@override</keyword>
+  <common>Widget</common> <keyword>build</keyword><common>(</common><construct>BuildContext</construct> <common>context</common><common>)</common> <keyword>{</keyword>
+    <keyword>return</keyword> <method>Container</method><common>(</common>
+      <common>margin</common>: <method>EdgeInsets</method>.<common>all</common>(<common>5.0</common>),
+      <common>height</common>:<construct> 140.0</construct>,
+      <common>width</common>:<construct> 100.0</construct>,
+      <common>child</common>: <method>Center</method><common>(</common>
+        <common>child</common>: <method>Stack</method><construct>(</construct>
+          <common>children</common>: <keyword>[</keyword>
+            <method>AnimatedOpacity</method>(
+              <common>opacity</common>: <construct>onIt</construct> <keyword>?</keyword> <common>1.0</common> <keyword>:</keyword> <common>0.0</common>,
+              <common>curve</common>: <construct>onIt</construct> <keyword>?</keyword> <method>Curves</method><common>.easeOutBack</common> <keyword>:</keyword>  <method>Curves</method><common>.easeIn</common>,
+              <common>duration</common>: <method>Duration</method>(<construct>milliseconds</construct><common>: 200</common>),
+              <common>child</common>: <method>AnimatedAlign</method>(
+              <common>curve</common>: <contstruct>onIt</contstruct> <keyword>?</keyword> <method>Curves</method><common>.easeOutBack</common> <keyword>:</keyword> <method>Curves</method><common>.easeIn</common>,
+                <common>alignment</common>: <construct>onIt</construct> <keyword>?</keyword> <construct>Alignment</construct>(0.0, -1.0) : <construct>Alignment</construct>(<common>0.0</common>,<common> 0.0</common>),
+                <common>duration</common>: <construct>Duration</construct>(<common>milliseconds</common><common>: 200</common>),
+                <common>child</common>: <method>Stack</method>(
+                  <common>clipBehavior</common>: <construct>Clip</construct><common>.none</common>,
+                  <common>children</common>: <keyword>[</keyword>
+                    <method>Positioned</method>(
+                      <common>left</common>: <common>45.0</common>,
+                      <common>top</common>: <common>30.0</common>,
+                      <common>child</common>: <method>Transform</method>(
+                        <common>transform</common>: <construct>Matrix4</construct><common>.rotationZ</common>(<common>pi / 4</common>),
+                        <common>alignment</common>: <construct>FractionalOffset</construct><common>.center</common>,
+                        <common>child</common>: <method>Container</method>(
+                          <common>height</common>: <common>10.0</common>,
+                          <common>width</common>: <common>10.0</common>,
+                          <common>color</common>: <construct>widget</construct><common>.color</common>,
+                        ),
                       ),
-                      <common>padding</common>: <method>EdgeInsets</method>.<constructor>symmetric</constructor>(horizontal: 5, vertical: 15),
-                      <common>margin</common>: <method>EdgeInsets</method>.<constructor>symmetric</constructor>(horizontal: 20.0, vertical: 15.0),
+                    ),
+                    <method>Container</method>(
+                      <common>height</common>: 35.0,
+                      <common>width</common>: 100.0,
+                      <common>decoration</common>: <construct>BoxDecoration</construct>(
+                        <common>borderRadius</common>: <contstruct>BorderRadius</contstruct><common>.circular</common>(<common>10.0</common>),
+                        <common>color</common>: <construct>widget</construct><common>.color</common>,
+                      ),
                       <common>child</common>: <method>Center</method>(
-                        <common>child</common>:<method> Row</method>(
-                          mainAxisAlignment: <method>MainAxisAlignment</method>.<constructor>center</constructor>,
-                          <common>children</common>: [
-                            Container(
-                              <common>height</common>: 15,
-                              <common>width</common>: 15.0,
-                              <common>child</common>: <method>Image</method>(
-                                <common>image</common>: <method>AssetImage</method>('asset/dart-icon.png'),
-                              ),
-                            ),
-                            <method>SizedBox</method>(
-                              <common>width</common>: 10.0,
-                            ),
-                          <method>  Text</method>(
-                              "<string>main. dart</string>",
-                              <common>style</common>:<method> GoogleFonts</method>.<constructor>poppins</constructor>(
-                                <common>fontSize</common>: 15.0,
-                                <common>fontWeight</common>: <method>FontWeight</method>.w700,
-                              ),
-                            ),
-                          ],
+                        <common>child</common>: <method>Text</method>(
+                          <construct>widget</construct><common>.text</common>,
+                          <common>style</common>: <construct>TextStyle</construct>(
+                            <common>color</common>: <construct>Colors</construct><common>.white</common>,
+                            <common>fontSize</common>: <common>16.0</common>,
+                            <common>fontWeight</common>: <construct>FontWeight</construct><common>.w500</common>,
+                          ),
                         ),
                       ),
                     ),
-                    SingleChildScrollView(
-                      <common>scrollDirection</common>: Axis.<constructor>horizontal</constructor>,
-                      <common>child</common>: Container(
-                        <common>height</common>: widget.<constructor>height</constructor>,
-                        <common>child</common>: DartCodeViewer.<constructor>io19</constructor>(
-                          <common>widget</common>.code,
-                        ),
-                      ),
-                    ),
-                  ],
+                  <keyword>]</keyword>,
                 ),
-              );
-            }
-          }
--->
-
+              ),
+            ),
+            <method>Align</method>(
+              <common>child</common>: <construct>MouseRegion</construct>(
+                <common>onEnter</common>: (<construct>value</construct>) {
+                  <construct>setState</construct>(<common>()</common> {
+                    <common>onIt = true</common>;
+                  });
+                },
+                <method>onExit</method>: (<construct>value</construct>) {
+                  <construct>setState</construct>(<common>()</common> {
+                    <common>onIt = false</common>;
+                  });
+                },
+                <common>child</common>: <method>AnimatedContainer</method>(
+                  <common>height</common>:<common> 50.0</common>,
+                  <common>width</common>: <common>50.0</common>,
+                  <common>duration</common>: <construct>Duration</construct>(<common>milliseconds</common>: <common>375</common>),
+                  <common>decoration</common>: <construct>BoxDecoration</construct>(
+                    <common>color</common>: <construct>onIt</construct> <keyword>?</keyword> <construct>widget</construct><common>.color</common> : <construct>Colors</construct><common>.white</common>,
+                    <common>borderRadius</common>: <construct>BorderRadius</construct><common>.circular</common>(<common>50.0</common>),
+                  ),
+                  <common>child</common>: <method>Icon</method>(
+                    <construct>widget</construct><common>.icon</common>,
+                    <common>color</common>: <construct>onIt</construct> <keyword>?</keyword> <construct>Colors</construct><common>.white</common> <keyword>:</keyword> <construct>widget</construct><common>.color</common>,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
           </pre>
 		  </div>
 
